@@ -1,0 +1,1 @@
+# pict-sem6-LP2
