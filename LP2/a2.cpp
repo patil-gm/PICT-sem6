@@ -3,7 +3,7 @@ using namespace std;
 
 unordered_map< int , vector<int>> adj; 
 
-void BFS(unordered_map< int , vector<int>> &map){
+void BFS(){
 
         unordered_set <int> visited;
         cout<<"Enter the starting point for BFS ";
@@ -29,10 +29,10 @@ void BFS(unordered_map< int , vector<int>> &map){
 }
 
 
-void DFS(unordered_map< int , vector<int>> &map){
+void DFS(){
 
         unordered_set <int> visited;
-        cout<<"Enter the starting point for BFS ";
+        cout<<"Enter the starting point for DFS ";
         int start;cin>>start;
         stack<int> s;
         s.push(start);
@@ -54,8 +54,21 @@ void DFS(unordered_map< int , vector<int>> &map){
         cout<<"\n";
 }
 
-int main(){
 
+void dfsRec (int node, unordered_map<int,bool> &visited,vector<int> &ans)
+{
+  ans.push_back(node);
+  visited[node]=true;
+  
+// for every node making recusive call
+for(auto it:adj[node]){
+  if(!visited[it]) dfsRec(it,visited,ans);
+}
+}
+
+
+int main(){
+        unordered_map<int,bool> visited;
         while(1){
             cout<<"Do you wants to add the edge ? (y/n)";
             char c;cin>>c;
@@ -66,14 +79,25 @@ int main(){
             cin>>u>>v;
             adj[u].push_back(v);
             adj[v].push_back(u);
-
-            
+            visited[u]=false;
+            visited[v]=false;
         }
             
-            BFS(adj);
-            DFS(adj);
+            BFS();
+            DFS();
+
+
+    vector<int> recDfs;
+
+    cout<<"*********** RECURSIVE DFS TRAVERSAL ***********"<<endl;
+    cout<<"Enter the starting point for DFS ";
+    int start;cin>>start;
+    
+    dfsRec(start,visited,recDfs);
+    for(auto i:recDfs)cout<<i<<" ";
+    cout<<endl;
 }
 
 
 
-// y 0 1 y 0 2 y 1 3 y 1 4 y 2 5 y 2 6
+// y 0 1 y 0 2 y 1 3 y 1 4 y 2 5 y 2 6 n
