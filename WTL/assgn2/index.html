@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+  <link rel="stylesheet" href="style.css" />
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>assgn 2</title>
+  </head>
+  <style>
+    table,
+    th,
+    td {
+      border: 1px solid black;
+    }
+  </style>
+  <body>
+    <h1 class="title">Assignment No : 2</h1>
+    <br />
+
+    <h2 class="subtitle"><span>Different types of Tags </span></h2>
+    <br />
+
+    <div class="tags">
+      <h2 style="text-align: center">heading tags</h2>
+      <!-- <P>threre are six heading tags : </P> -->
+      <div class="ex">
+        <h1>This is heading 1</h1>
+        <h2>This is heading 2</h2>
+        <h3>This is heading 3</h3>
+        <h4>This is heading 4</h4>
+        <h5>This is heading 5</h5>
+        <h6>This is heading 6</h6>
+      </div>
+    </div>
+
+    <div class="tags">
+      <h2 style="text-align: center">Text Formatting tags</h2>
+      <!-- <P>threre are six heading tags : </P> -->
+      <div class="ex4">
+        <b>Bold text</b> <br /><br />
+        <strong>this is strong tag</strong> <br /><br />
+        <i> Italic text</i> <br /><br />
+        <em>Emphasized text</em> <br /><br />
+        <mark>Marked text</mark> <br /><br />
+        <small>Smaller text</small> <br /><br />
+        <del>Deleted text</del> <br />
+        <br />
+        <ins>Inserted text</ins> <br /><br />
+        <p>this is <sub>Subscript text</sub></p>
+        <p>this is <sup>Superscript text</sup></p>
+        <br /><br />
+      </div>
+    </div>
+
+    <div class="tags">
+      <h2 style="text-align: center">table</h2>
+
+      <div class="ex1">
+        <table style="width: 100%">
+          <tr>
+            <th>Person 1</th>
+            <th>Person 2</th>
+            <th>Person 3</th>
+          </tr>
+          <tr>
+            <td>Emil</td>
+            <td>Tobias</td>
+            <td>Linus</td>
+          </tr>
+          <tr>
+            <td>16</td>
+            <td>14</td>
+            <td>10</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+
+    <div class="tags">
+      <h2 style="text-align: center">list</h2>
+
+      <div class="ex">
+        <h2>An Unordered HTML List</h2>
+
+        <ul>
+          <li>COMPUTER</li>
+          <li>IT</li>
+          <li>ENTC</li>
+        </ul>
+
+        <h2>An Ordered HTML List</h2>
+
+        <ol>
+          <li>MANGO</li>
+          <li>APPLE</li>
+          <li>CHERRY</li>
+        </ol>
+      </div>
+    </div>
+
+    <div class="tags">
+      <h2 style="text-align: center">Anchor</h2>
+      <div class="link">
+        <a href="https://www.w3schools.com/" target="_blank"
+          >to learn more about webdevlopement click here
+        </a>
+      </div>
+    </div>
+
+    <div class="tags">
+      <h2 style="text-align: center">image</h2>
+      <div class="image">
+        <img src="./tree.jpg" alt="image of a tree" />
+      </div>
+    </div>
+
+    <h2 class="subtitle"><span>Form</span></h2>
+
+    <div class="ex2">
+      <form>
+        <label for="fname">First name:</label><br />
+        <input type="text" id="fname" name="fname" value="John" /><br />
+        <label for="lname">Last name:</label><br />
+        <input type="text" id="lname" name="lname" value="Doe" /><br /><br />
+
+        <p>select your gender :</p>
+        <input type="radio" id="html" name="gender" value="male" />
+        <label for="male">Male</label>
+        <input type="radio" id="css" name="gender" value="female" />
+        <label for="female">Female</label>
+        <input type="radio" id="javascript" name="gender" value="other" />
+        <label for="other">Other</label>
+        <br /><br />
+
+        <label for="cars">Choose a car:</label>
+        <select id="cars" name="cars">
+          <option value="volvo">Volvo</option>
+          <option value="saab">Saab</option>
+          <option value="fiat">Fiat</option>
+          <option value="audi">Audi</option>
+        </select>
+        <br /><br />
+        <input type="submit" value="Submit" />
+      </form>
+    </div>
+
+    <!-- If you click the "Submit" button, the form-data will be sent to a page called "/action_page.php". -->
+  </body>
+</html>
